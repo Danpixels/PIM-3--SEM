@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Carta — Pokémon TCG</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">P</div>
+        <div>
+          <p class="logo-title">Pokémon TCG</p>
+          <p class="logo-sub">Controle de Estoque</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <p class="nav-label">Menu</p>
+        <a href="index.html" class="nav-item"><span class="nav-icon">▦</span> Dashboard</a>
+        <a href="estoque.html" class="nav-item"><span class="nav-icon">▤</span> Estoque</a>
+        <a href="cadastrar.html" class="nav-item active"><span class="nav-icon">＋</span> Cadastrar Carta</a>
+        <a href="relatorios.html" class="nav-item"><span class="nav-icon">📊</span> Relatórios</a>
+      </nav>
+    </aside>
+
+    <div class="backdrop" id="backdrop" onclick="toggleSidebar()"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" onclick="toggleSidebar()" aria-label="Abrir menu">☰</button>
+        <h1 class="topbar-title">Cadastrar nova carta</h1>
+      </header>
+
+      <main class="content">
+        <section>
+          <h2 class="page-title">Nova carta</h2>
+          <p class="page-subtitle">Preencha os dados da carta para adicioná-la ao estoque.</p>
+        </section>
+
+        <section>
+          <form class="card card-padded" onsubmit="event.preventDefault(); alert('Carta cadastrada com sucesso!');">
+            <div class="form-grid">
+              <div class="form-field full">
+                <label class="form-label" for="nome">Nome da carta *</label>
+                <input class="form-input" type="text" id="nome" placeholder="Ex.: Charizard VMAX" required />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="colecao">Coleção *</label>
+                <select class="form-select" id="colecao" required>
+                  <option value="">Selecione...</option>
+                  <option>Darkness Ablaze</option>
+                  <option>Vivid Voltage</option>
+                  <option>Evolving Skies</option>
+                  <option>Silver Tempest</option>
+                  <option>Fusion Strike</option>
+                  <option>Shining Legends</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="numero">Número da carta</label>
+                <input class="form-input" type="text" id="numero" placeholder="Ex.: 020/189" />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="raridade">Raridade *</label>
+                <select class="form-select" id="raridade" required>
+                  <option value="">Selecione...</option>
+                  <option>Comum</option>
+                  <option>Incomum</option>
+                  <option>Rara</option>
+                  <option>Rara Holo</option>
+                  <option>Ultra Rara</option>
+                  <option>Secreta</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="condicao">Condição</label>
+                <select class="form-select" id="condicao">
+                  <option>Mint (M)</option>
+                  <option>Near Mint (NM)</option>
+                  <option>Light Played (LP)</option>
+                  <option>Played (PL)</option>
+                  <option>Damaged (DMG)</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="qtd">Quantidade *</label>
+                <input class="form-input" type="number" id="qtd" min="1" value="1" required />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="preco">Preço de venda (R$) *</label>
+                <input class="form-input" type="number" id="preco" min="0" step="0.01" placeholder="0,00" required />
+              </div>
+
+              <div class="form-field full">
+                <label class="form-label" for="obs">Observações</label>
+                <textarea class="form-textarea" id="obs" placeholder="Detalhes sobre a carta, defeitos, edição especial..."></textarea>
+                <span class="form-hint">Opcional — visível apenas internamente.</span>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="btn btn-outline">Limpar</button>
+              <button type="submit" class="btn btn-primary">
+                <span>＋</span> Cadastrar carta
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('backdrop').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

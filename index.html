@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>Controle PokeVault</title>
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">P</div>
+        <div>
+          <p class="logo-title">Pokémon TCG</p>
+          <p class="logo-sub">Controle de Estoque</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <p class="nav-label">Menu</p>
+        <a href="index.html" class="nav-item active"><span class="nav-icon">▦</span> Dashboard</a>
+        <a href="estoque.html" class="nav-item"><span class="nav-icon">▤</span> Estoque</a>
+        <a href="cadastrar.html" class="nav-item "><span class="nav-icon">＋</span> Cadastrar Carta</a>
+        <a href="relatorios.html" class="nav-item"><span class="nav-icon">📊</span> Relatórios</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn">☰</button>
+        <h1 class="topbar-title">Controle de Estoque PokeVault</h1>
+      </header>
+
+      <main class="content">
+        <section>
+          <h2 class="section-title">Visão Geral</h2>
+          <div class="grid grid-3">
+            <article class="card metric">
+              <div>
+                <p class="metric-label">Total de Cartas</p>
+                <p class="metric-value">1.248</p>
+              </div>
+              <div class="metric-icon icon-primary">📦</div>
+            </article>
+
+            <article class="card metric">
+              <div>
+                <p class="metric-label">Valor em Estoque</p>
+                <p class="metric-value">R$ 34.520,00</p>
+              </div>
+              <div class="metric-icon icon-success">💰</div>
+            </article>
+
+            <article class="card metric">
+              <div>
+                <p class="metric-label">Valor Vendido</p>
+                <p class="metric-value">R$ 12.890,00</p>
+              </div>
+              <div class="metric-icon icon-accent">📈</div>
+            </article>
+          </div>
+        </section> 
+
+        <section>
+          <h2 class="section-title">Ações Rápidas</h2>
+          <div class="grid grid-2">
+            <button class="btn btn-primary btn-lg">
+              <a href="cadastrar.html"><span>+</span> Cadastrar nova carta</a>
+            </button>
+            <button class="btn btn-outline btn-lg">
+              <a href="estoque.html"><span>👁</span>Ver estoque</a>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-title">Atividade Recente</h2>
+          <div class="card list">
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-success">＋</div>
+                <div>
+                  <p class="list-title">Charizard VMAX</p>
+                  <p class="list-sub">Darkness Ablaze - Adicionada</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 180,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-accent">📈</div>
+                <div>
+                  <p class="list-title">Pikachu V</p>
+                  <p class="list-sub">Vivid Voltage - Vendida</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 45,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-success">＋</div>
+                <div>
+                  <p class="list-title">Mewtwo GX</p>
+                  <p class="list-sub">Darkness Ablaze - Adicionada</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 95,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-accent">📈</div>
+                <div>
+                  <p class="list-title">Lugia V</p>
+                  <p class="list-sub">Darkness Ablaze - Adicionada</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 95,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-accent">📈</div>
+                <div>
+                  <p class="list-title">Rayquaza VMAX</p>
+                  <p class="list-sub">Darkness Ablaze - Adicionada</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 210,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <div class="list-left">
+                <div class="list-icon icon-success">＋</div>
+                <div>
+                  <p class="list-title">Umbreon VMAX</p>
+                  <p class="list-sub">Darkness Ablaze - Adicionada</p>
+                </div>
+              </div>
+              <div class="list-right">
+                <p class="list-price">R$ 350,00</p>
+                <p class="list-time">⏱ Hoje, 14:32</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('backdrop');
+  
+      sidebar.classList.toggle('open');
+      backdrop.classList.toggle('open');
+    }
+  </script>
+  
+</body>
+
+</html>

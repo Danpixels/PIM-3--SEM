@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estoque — Pokémon TCG</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">P</div>
+        <div>
+          <p class="logo-title">Pokémon TCG</p>
+          <p class="logo-sub">Controle de Estoque</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <p class="nav-label">Menu</p>
+        <a href="index.html" class="nav-item"><span class="nav-icon">▦</span> Dashboard</a>
+        <a href="estoque.html" class="nav-item active"><span class="nav-icon">▤</span> Estoque</a>
+        <a href="cadastrar.html" class="nav-item"><span class="nav-icon">＋</span> Cadastrar Carta</a>
+        <a href="relatorios.html" class="nav-item"><span class="nav-icon">📊</span> Relatórios</a>
+      </nav>
+    </aside>
+
+    <div class="backdrop" id="backdrop" onclick="toggleSidebar()"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="menu-btn" onclick="toggleSidebar()" aria-label="Abrir menu">☰</button>
+        <h1 class="topbar-title">Estoque</h1>
+      </header>
+
+      <main class="content">
+        <section>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <h2 class="page-title">Cartas em estoque</h2>
+              <p class="page-subtitle">1.248 cartas cadastradas</p>
+            </div>
+            <a href="cadastrar.html" class="btn btn-primary">
+              <span>＋</span> Nova carta
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <div class="card card-padded">
+            <div class="filters">
+              <div class="search">
+                <input type="text" placeholder="Buscar por nome, coleção ou número..." />
+              </div>
+              <select class="form-select" style="max-width:180px;">
+                <option>Todas as coleções</option>
+                <option>Darkness Ablaze</option>
+                <option>Vivid Voltage</option>
+                <option>Evolving Skies</option>
+                <option>Silver Tempest</option>
+              </select>
+              <select class="form-select" style="max-width:160px;">
+                <option>Todas raridades</option>
+                <option>Comum</option>
+                <option>Incomum</option>
+                <option>Rara</option>
+                <option>Ultra Rara</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="card">
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Carta</th>
+                    <th>Coleção</th>
+                    <th>Raridade</th>
+                    <th>Qtd</th>
+                    <th>Preço</th>
+                    <th>Status</th>
+                    <th class="col-actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Charizard VMAX</strong><br /><span class="list-sub">#020/189</span></td>
+                    <td>Darkness Ablaze</td>
+                    <td>Ultra Rara</td>
+                    <td>3</td>
+                    <td>R$ 180,00</td>
+                    <td><span class="badge badge-success">Disponível</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pikachu V</strong><br /><span class="list-sub">#043/185</span></td>
+                    <td>Vivid Voltage</td>
+                    <td>Rara</td>
+                    <td>5</td>
+                    <td>R$ 45,00</td>
+                    <td><span class="badge badge-success">Disponível</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mewtwo GX</strong><br /><span class="list-sub">#072/073</span></td>
+                    <td>Shining Legends</td>
+                    <td>Ultra Rara</td>
+                    <td>1</td>
+                    <td>R$ 95,00</td>
+                    <td><span class="badge badge-warning">Último</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lugia V</strong><br /><span class="list-sub">#138/195</span></td>
+                    <td>Silver Tempest</td>
+                    <td>Rara</td>
+                    <td>2</td>
+                    <td>R$ 120,00</td>
+                    <td><span class="badge badge-success">Disponível</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rayquaza VMAX</strong><br /><span class="list-sub">#218/203</span></td>
+                    <td>Evolving Skies</td>
+                    <td>Ultra Rara</td>
+                    <td>4</td>
+                    <td>R$ 210,00</td>
+                    <td><span class="badge badge-success">Disponível</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Umbreon VMAX</strong><br /><span class="list-sub">#215/203</span></td>
+                    <td>Evolving Skies</td>
+                    <td>Ultra Rara</td>
+                    <td>0</td>
+                    <td>R$ 350,00</td>
+                    <td><span class="badge badge-neutral">Esgotado</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-outline btn-sm" disabled>Vender</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gengar VMAX</strong><br /><span class="list-sub">#020/198</span></td>
+                    <td>Fusion Strike</td>
+                    <td>Ultra Rara</td>
+                    <td>2</td>
+                    <td>R$ 165,00</td>
+                    <td><span class="badge badge-success">Disponível</span></td>
+                    <td class="col-actions">
+                      <button class="btn btn-ghost btn-sm">Editar</button>
+                      <button class="btn btn-primary btn-sm">Vender</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('backdrop').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
