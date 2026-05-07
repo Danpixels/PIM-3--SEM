@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="app">
+    <!--SIDEBAR-->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <div class="logo-badge">P</div>
@@ -42,11 +43,11 @@
           <p class="page-subtitle">Preencha os dados da carta para adicioná-la ao estoque.</p>
         </section>
 
-        <section>
+        <section> <!--DAQUI PRA BAIXO É SÓ VER O QUE ESTÁ EM 'LABEL'-->
           <form class="card card-padded" onsubmit="event.preventDefault(); alert('Carta cadastrada com sucesso!');">
             <div class="form-grid">
               <div class="form-field full">
-                <label class="form-label" for="nome">Nome da carta *</label>
+                <label class="form-label" for="nome">Nome da carta *</label> 
                 <input class="form-input" type="text" id="nome" placeholder="Ex.: Charizard VMAX" required />
               </div>
 
